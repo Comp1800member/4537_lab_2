@@ -1,5 +1,6 @@
-// ChatGPT-3.5 (https://chat.openai.com/) was used to code solutions presented in this assignment
-
+/*
+I used ChatGpt to code certain parts.
+*/
 document.getElementById("searching-form").addEventListener("submit", function (error) {
     error.preventDefault();
     const searchWord = document.getElementById("searched-word").value;
