@@ -1,11 +1,13 @@
 /*
 I used ChatGpt to code certain parts.
 */
+const apiServer = "https://comp4537-lab4-38gg.onrender.com/api/definitions";
+
 document.getElementById("searching-form").addEventListener("submit", function (error) {
     error.preventDefault();
     const searchWord = document.getElementById("searched-word").value;
     const ajaxReq = new XMLHttpRequest();
-    ajaxReq.open("GET", `https://comp4537-lab4-38gg.onrender.com/api/definitions/?word=${searchWord}`, true);
+    ajaxReq.open("GET", `${apiServer}/api/definitions/?word=${searchWord}`, true);
     ajaxReq.onreadystatechange = function () {
         if (ajaxReq.readyState === 4) {
             if (ajaxReq.status === 200) {

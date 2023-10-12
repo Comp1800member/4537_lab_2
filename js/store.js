@@ -1,12 +1,14 @@
 /*
 Chat GPT was used to help code certain parts of this assignment.
 */
+const apiServer = "https://comp4537-lab4-38gg.onrender.com/api/definitions";
+
 document.getElementById("storing-form").addEventListener("submit", function (event) {
     event.preventDefault();
     const word = document.getElementById("word").value;
     const definition = document.getElementById("definition").value;
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://comp4537-lab4-38gg.onrender.com/api/definitions", true);
+    xhr.open("POST", `${apiServer}/api/definitions`, true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
