@@ -6,7 +6,7 @@ document.getElementById("storing-form").addEventListener("submit", function (eve
     const word = document.getElementById("word").value;
     const definition = document.getElementById("definition").value;
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://minimaldictionary.onrender.com/api/definitions", true);
+    xhr.open("POST", "https://comp4537-lab4-38gg.onrender.com/api/definitions", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {

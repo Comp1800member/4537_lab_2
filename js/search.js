@@ -2,9 +2,9 @@
 
 document.getElementById("searching-form").addEventListener("submit", function (error) {
     error.preventDefault();
-    const searchWord = document.getElementById("searchWord").value;
+    const searchWord = document.getElementById("searched-word").value;
     const ajaxReq = new XMLHttpRequest();
-    ajaxReq.open("GET", `https://minimaldictionary.onrender.com/api/definitions/?word=${searchWord}`, true);
+    ajaxReq.open("GET", `https://comp4537-lab4-38gg.onrender.com/api/definitions/?word=${searchWord}`, true);
     ajaxReq.onreadystatechange = function () {
         if (ajaxReq.readyState === 4) {
             if (ajaxReq.status === 200) {
